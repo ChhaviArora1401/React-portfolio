@@ -24,8 +24,7 @@ const Wrapper = styled.div`
 
 .text {
   visibility: hidden;
-  color: #fff; 
-//   z-index: 1;
+  color: #fff;
 }
 
 .side:hover .text {
@@ -49,14 +48,14 @@ const Wrapper = styled.div`
     text-align: center;
 }
 
-.menu .subitem{
+.menu .subitem, .menu .last {
     display: flex;  
     padding: 12px 0px 12px 30px;
     margin: 0 15px 5px 15px;
     margin-bottom: 5px;
 }
 
-.subitem .text {
+.subitem .text, .last .text {
     margin: 0 15px 0 15px;
 }
 
@@ -67,25 +66,9 @@ const Wrapper = styled.div`
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
-.end {
-    margin-bottom: 20px;
-    display: flex;
+.menu .last {
+    align-items: flex-end;
 }
-
-.end .last {
-    display: flex;  
-    padding: 12px 0px 12px 30px;
-    margin: 0 15px 5px 15px;
-}
-
-.last .text {
-    font-size: 8px;
-    margin: 0 15px 0 0px;
-    float: right;
-    // writing-mode: vertical-lr;
-    // text-orientation: upright;
-}
-
 
 `
 const Side = () => {
@@ -101,8 +84,8 @@ const Side = () => {
                 <div className="subitem"><span className='icon'>@</span> <span className="text">Works</span></div>
                 <div className="subitem"><span className='icon'>@</span> <span className="text">Contact</span></div>
             </div>
-            <div className='end'>
-                <div className="last"><span className='icon'>@</span> <span className="text">Scroll down</span></div>
+            <div className='menu'>
+                <div className="last"><span className='icon'>@</span> <span className="text">Scroll&nbsp;Down</span></div>
             </div>
         </div>
     </Wrapper >
