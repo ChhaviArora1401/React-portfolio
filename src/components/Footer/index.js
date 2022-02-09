@@ -2,14 +2,16 @@ import React from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-
-
+height: 50px;
+margin-top: 2%;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
 `
 const Foot = () => {
     return <Wrapper>
-        <div className="main-content">
-            <center>&copyright; Chhavi Arora 2022</center>
-        </div>
+        <center>© Chhavi Arora 2022</center>
     </Wrapper >
 };
 

@@ -85,7 +85,7 @@ const Side = () => {
                 <div className="subitem"><span className='icon'>@</span> <span className="text">Contact</span></div>
             </div>
             <div className='menu'>
-                <div className="last"><span className='icon'>@</span> <span className="text">Scroll&nbsp;Down</span></div>
+                <div className="last"><span className='icon'><i class="fa-regular fa-down-long"></i></span> <span className="text">Scroll&nbsp;Down</span></div>
             </div>
         </div>
     </Wrapper >
