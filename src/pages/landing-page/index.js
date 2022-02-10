@@ -10,24 +10,24 @@ const Wrapper = styled.div`
 background: #f7f7f7;
 `
 
-const headings = [
-    {
-        pre_head: "SOME INFO",
-        head: "ABOUT ME"
-    },
-    {
-        pre_head: "CHECK OUT MY",
-        head: "SKILLS"
-    },
-    {
-        pre_head: "TAKE A LOOK AT MY",
-        head: "PROJECTS"
-    },
-    {
-        pre_head: "SAY HELLO",
-        head: "CONTACT"
-    }
-];
+// const headings = [
+//     {
+//         pre_head: "SOME INFO",
+//         head: "ABOUT ME"
+//     },
+//     {
+//         pre_head: "CHECK OUT MY",
+//         head: "SKILLS"
+//     },
+//     {
+//         pre_head: "TAKE A LOOK AT MY",
+//         head: "PROJECTS"
+//     },
+//     {
+//         pre_head: "SAY HELLO",
+//         head: "CONTACT"
+//     }
+// ];
 
 const Main = () => {
     return <Wrapper>

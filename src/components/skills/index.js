@@ -8,20 +8,66 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-.skills span {
-    display: flex;
-    flex-direction: column;
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 3rem;
+    justify-items: center;
 }
 
-.skills span img {
-    width: 30%;
-}
 `
 
 const Iwrapper = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    font-size: 0.8rem;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 15px;
+    width: 50%;
+    height: 90%;
+    box-shadow: 0px 4px 8px rgb(134 151 168/10%);
+    border: 1px solid #eee;
+    justify-content: space-between;
+    img {
+        width: 40%;
+    }
 `
 const icon = [
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
+    {
+        src: "https://alexcalia.com/assets/skills/api.svg",
+        span: "name"
+    },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
         span: "name"

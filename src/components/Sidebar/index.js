@@ -70,6 +70,11 @@ const Wrapper = styled.div`
     align-items: flex-end;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 `
 const Side = () => {
     return <Wrapper>
@@ -78,11 +83,11 @@ const Side = () => {
                 CA
             </div>
             <div className='menu'>
-                <div className="subitem"><span className='icon'>@</span> <span className="text">Home</span></div>
-                <div className="subitem"><span className='icon'>@</span> <span className="text">About</span></div>
-                <div className="subitem"><span className='icon'>@</span> <span className="text">Skills</span></div>
-                <div className="subitem"><span className='icon'>@</span> <span className="text">Works</span></div>
-                <div className="subitem"><span className='icon'>@</span> <span className="text">Contact</span></div>
+                <a href="#home"><div className="subitem"><span className='icon'>@</span> <span className="text">Home</span></div></a>
+                <a href="#about"><div className="subitem"><span className='icon'>@</span> <span className="text">About</span></div></a>
+                <a href="#skills"><div className="subitem"><span className='icon'>@</span> <span className="text">Skills</span></div></a>
+                <a href="#works"><div className="subitem"><span className='icon'>@</span> <span className="text">Works</span></div></a>
+                <a href="#contact"><div className="subitem"><span className='icon'>@</span> <span className="text">Contact</span></div></a>
             </div>
             <div className='menu'>
                 <div className="last"><span className='icon'><i class="fa-regular fa-down-long"></i></span> <span className="text">Scroll&nbsp;Down</span></div>
