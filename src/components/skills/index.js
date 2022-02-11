@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-height: 90vh;
+height: 50vh;
 margin: 0% 1% 1% 8%;
 display: flex;
 justify-content: center;
@@ -38,27 +38,27 @@ const Iwrapper = styled.div`
 const icon = [
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "HTML"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "CSS"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "JavaScript"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "React"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "Git"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "VS Code"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
@@ -88,10 +88,8 @@ const Icons = (props) => {
 
 const Skills = () => {
     return <Wrapper>
-        <div>----- some Info</div>
-        <h3>ABOUT ME</h3>
         <div className="main-content">
-            <div className='skills'>
+            <div className='skills' id="skills">
                 {
                     icon.map((li) => {
                         return <Icons src={li.src} span={li.span} />

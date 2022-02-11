@@ -58,7 +58,7 @@ a {
 const Intro = () => {
     return <Wrapper>
         <div className="main-content">
-            <div className='intro'>
+            <div className='intro' id="home">
                 <div className='image'><img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" /></div>
                 <div>
                     <h3>HI THERE! I'M</h3>

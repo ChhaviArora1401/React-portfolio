@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { useState } from 'react';
 
 const Wrapper = styled.div`
 height: 90vh;
@@ -54,14 +55,18 @@ flex-direction: column;
     width: 94.5%;
 }
 `
-const Contact = () => {
-    return <Wrapper>
-        <div>
-            ----- Some Info
-            <h3>ABOUT ME</h3>
-        </div>
 
-        <div className="main-content">
+const Contact = () => {
+    const [email, setEmail] = useState("");
+    const [uname, setUname] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const hello = (e) => {
+        e.preventDefault();
+        console.log(email, uname, subject, message);
+    };
+    return <Wrapper>
+        <div className="main-content" id="contact">
             <h3>Get In Touch</h3>
             <div className='parti'>
                 <div className='c1'>
@@ -76,13 +81,13 @@ const Contact = () => {
                 </div>
             </div>
             <h3>Contact Form</h3>
-            <form>
+            <form onSubmit={(e) => hello(e)}>
                 <div className='half'>
-                    <input type="text" placeholder='Name' name="name" className="fields" />
-                    <input type="text" placeholder='Email' name="email" className="fields" />
+                    <input onChange={(e) => setUname(e.target.value)} type="text" placeholder='Name' name="uname" className="fields" defaultValue={uname} />
+                    <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email' name="email" className="fields" defaultValue={email} />
                 </div>
-                <input type="text" placeholder='Subject' name="name" className="fields full" />
-                <input type="text" placeholder='Message' name="name" className="fields full" />
+                <input onChange={(e) => setSubject(e.target.value)} type="text" placeholder='Subject' name="subject" className="fields full" defaultValue={subject} />
+                <input onChange={(e) => setMessage(e.target.value)} type="text" placeholder='Message' name="message" className="fields full" defaultValue={message} />
                 <input type="Submit" className='button' style={{ display: "block" }} />
             </form>
         </div>
