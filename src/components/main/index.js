@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-height: 90vh;
+height: 100vh;
 margin: 0% 1% 1% 8%;
 display: flex;
 justify-content: center;
@@ -56,20 +56,20 @@ a {
 
 `
 const Intro = () => {
-    return <Wrapper>
+    return <Wrapper id="home">
         <div className="main-content">
-            <div className='intro' id="home">
+            <div className='intro'>
                 <div className='image'><img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" /></div>
                 <div>
                     <h3>HI THERE! I'M</h3>
-                    <h1><span>CHHAVI</span> ARORA</h1>
-                    <p>A Front-End Web Developer passionate about creating interactive applications and experiences on the web.</p>
+                    <h1><span className='color-text'>CHHAVI</span> ARORA</h1>
+                    <p>A <span className='color-text'>Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
                     <div className='buttons'>
-                        <button className='button'>Resume</button>
+                        <a href="https://docs.google.com/document/d/19R6mDWTHA-pDuHBmTGzNiMyo1B1Xp642g2EN_1RuQn0/edit"><button className='button'>Resume</button></a>
                         <span className='socials'>
-                            <a href=""> <button>@</button></a>
-                            <a href=""> <button>@</button></a>
-                            <a href=""> <button>@</button></a>
+                            <a href="https://www.linkedin.com/in/chhaviarora1401/"> <button>@</button></a>
+                            <a href="https://github.com/ChhaviArora1401"> <button>@</button></a>
+                            <a href="https://twitter.com/chhaviarora1401"> <button>@</button></a>
                         </span>
                     </div>
                 </div>

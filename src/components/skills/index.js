@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-height: 50vh;
+height: 40vh;
 margin: 0% 1% 1% 8%;
 display: flex;
 justify-content: center;
@@ -62,19 +62,19 @@ const icon = [
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "Php"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "C++"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "SQL"
     },
     {
         src: "https://alexcalia.com/assets/skills/api.svg",
-        span: "name"
+        span: "JQuery"
     }
 ];
 

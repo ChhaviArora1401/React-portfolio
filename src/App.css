@@ -11,6 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f7f7f7;
     color: #222;
+    font-size: 18px;
 }
 
 .main-content {
@@ -33,4 +34,17 @@ body {
     color: white;
     letter-spacing: 1px;
     border-radius: 40px;
+}
+
+.headings span:before {
+    content: "";
+    float: left;
+    margin: 1% 2% 0 0%;
+    width: 50px;
+    height: 1px;
+    background: #333;
+}
+
+.color-text {
+    color: #8444df;
 }

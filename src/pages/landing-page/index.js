@@ -11,6 +11,13 @@ background: #f7f7f7;
 `
 
 const Cwrapper = styled.div`
+.headings {
+    margin: 0 0 0 25%;
+}
+
+.headings span {
+    font-size: 0.75rem;
+}
 `
 
 const headings = [
@@ -35,9 +42,10 @@ const headings = [
 const CommonComponent = (props) => {
     const { pre_head, head } = props;
     return <Cwrapper>
-        <h1 className='headings'>{pre_head}</h1>
-        <div className="underline"></div>
-        <h2 className='headings'>{head}</h2>
+        <div className='headings'>
+            <span>{pre_head}</span>
+            <h2>{head}</h2>
+        </div>
         {props.children}
     </Cwrapper>
 };
@@ -46,7 +54,7 @@ const CommonComponent = (props) => {
 const Main = () => {
     return <Wrapper>
         <Intro />
-        <CommonComponent pre_head={headings[0].pre_head} head={headings[0].head}>
+        <CommonComponent pre_head={headings[0].pre_head} head={headings[0].head} id="about">
             <About />
         </CommonComponent>
         <CommonComponent pre_head={headings[1].pre_head} head={headings[1].head}>
