@@ -36,16 +36,18 @@ border: 1px solid #eee;
 
 const works = [
     {
-        src: "https://media.istockphoto.com/photos/background-illustration-of-a-traditional-ouija-board-picture-id183373027",
-        heading: "heading",
-        techstats: ["React ",
+        src: "assets/cake-bake.png",
+        heading: "Cake Bake",
+        techstats: ["PHP",
             " HTML ",
-            " CSS "],
+            " CSS ",
+            "JavaScript"
+        ],
         livelink: "",
         repolink: ""
     },
     {
-        src: "",
+        src: "assets/halloween.png",
         heading: "heading",
         techstats: ["react ",
             "juu ",

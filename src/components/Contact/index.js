@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useState } from 'react';
 
 const Wrapper = styled.div`
-height: 80vh;
+height: 90vh;
 margin: 0% 1% 1% 8%;
 display: flex;
 justify-content: center;
