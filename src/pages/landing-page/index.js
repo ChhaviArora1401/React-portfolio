@@ -5,19 +5,13 @@ import About from '../../components/about';
 import Skills from '../../components/skills';
 import Project from '../../components/project';
 import Contact from '../../components/Contact';
+import Foot from "../../components/Footer/index";
 
 const Wrapper = styled.div`
+width: calc(100% - 90px);
+margin-left: 90px;
+overflow: hidden;
 background: #f7f7f7;
-`
-
-const Cwrapper = styled.div`
-.headings {
-    margin: 0 0 0 25%;
-}
-
-.headings span {
-    font-size: 0.75rem;
-}
 `
 
 const headings = [
@@ -39,33 +33,18 @@ const headings = [
     }
 ];
 
-const CommonComponent = (props) => {
-    const { pre_head, head } = props;
-    return <Cwrapper>
-        <div className='headings'>
-            <span>{pre_head}</span>
-            <h2>{head}</h2>
-        </div>
-        {props.children}
-    </Cwrapper>
-};
-
-
 const Main = () => {
     return <Wrapper>
-        <Intro />
-        <CommonComponent pre_head={headings[0].pre_head} head={headings[0].head} id="about">
-            <About />
-        </CommonComponent>
-        <CommonComponent pre_head={headings[1].pre_head} head={headings[1].head}>
-            <Skills />
-        </CommonComponent>
-        <CommonComponent pre_head={headings[2].pre_head} head={headings[2].head}>
-            <Project />
-        </CommonComponent>
-        <CommonComponent pre_head={headings[3].pre_head} head={headings[3].head}>
-            <Contact />
-        </CommonComponent>
+        <div className="pageWrapper">
+            <Intro />
+            <main>
+                <About pre_head={headings[0].pre_head} head={headings[0].head} />
+                <Skills pre_head={headings[1].pre_head} head={headings[1].head} />
+                <Project pre_head={headings[2].pre_head} head={headings[2].head} />
+                <Contact pre_head={headings[3].pre_head} head={headings[3].head} />
+            </main>
+            <Foot />
+        </div>
     </Wrapper >
 };
 

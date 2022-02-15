@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-height: 40vh;
-margin: 0% 1% 1% 8%;
-display: flex;
-justify-content: center;
-align-items: center;
+const Wrapper = styled.section`
 flex-direction: column;
 .skills {
     display: grid;
@@ -15,7 +10,6 @@ flex-direction: column;
     grid-row-gap: 3rem;
     justify-items: center;
 }
-
 `
 
 const Iwrapper = styled.div`
@@ -37,43 +31,43 @@ const Iwrapper = styled.div`
 `
 const icon = [
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
         span: "HTML"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://www.kindpng.com/picc/m/464-4640184_css3-png-download-css-icon-transparent-png.png",
         span: "CSS"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
         span: "JavaScript"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://www.rapiddg.com/sites/default/files/imce-files/react.png",
         span: "React"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://avatars.githubusercontent.com/u/18133?s=200&v=4",
         span: "Git"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://yt3.ggpht.com/_q52i8bUAEvcb7JR4e-eNTv23y2A_wg5sCz0NC0GrGtcw1CRMWJSOPVHUDh_bngD0q4gMvVeoA=s900-c-k-c0x00ffffff-no-rj",
         span: "VS Code"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://cdn.iconscout.com/icon/free/png-256/php-27-226042.png",
         span: "Php"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
         span: "C++"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://thumbs.dreamstime.com/b/sql-icon-sql-icon-simple-vetor-icon-125045332.jpg",
         span: "SQL"
     },
     {
-        src: "https://alexcalia.com/assets/skills/api.svg",
+        src: "https://howtodoinjava.com/wp-content/uploads/jquery_logo.png",
         span: "JQuery"
     }
 ];
@@ -86,16 +80,19 @@ const Icons = (props) => {
 };
 
 
-const Skills = () => {
-    return <Wrapper>
-        <div className="main-content">
-            <div className='skills' id="skills">
-                {
-                    icon.map((li) => {
-                        return <Icons src={li.src} span={li.span} />
-                    })
-                }
-            </div>
+const Skills = (props) => {
+    const { pre_head, head } = props;
+    return <Wrapper className="main-content padding" id="skills">
+        <div className="headings">
+            <span>{pre_head}</span>
+            <p>{head}</p>
+        </div>
+        <div className="skills sectionContain">
+            {
+                icon.map((li) => {
+                    return <Icons src={li.src} span={li.span} />
+                })
+            }
         </div>
     </Wrapper >
 };

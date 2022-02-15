@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
 height: 50px;
 margin-top: 2%;
 background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
+font-size: 0.99rem;
 `
 const Foot = () => {
-    return <Wrapper>
+    return <Wrapper className='flex'>
         <center>© Chhavi Arora 2022</center>
     </Wrapper >
 };

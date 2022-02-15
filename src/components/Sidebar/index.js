@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-.side {
+const Wrapper = styled.section`
   background-color: #8444df;
   position: absolute;
   transition: 0.3s;
   height: 100vh;
-  width: 110px;
+  width: 105px;
   text-decoration: none;
   font-size: 20px;
   color: white;
@@ -16,9 +15,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
-}
-
-.side:hover {
+:hover {
     width: 220px;
 }
 
@@ -27,7 +24,7 @@ const Wrapper = styled.div`
   color: #fff;
 }
 
-.side:hover .text {
+:hover .text {
   visibility: visible;
 }
 
@@ -70,7 +67,7 @@ const Wrapper = styled.div`
     align-items: flex-end;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -78,20 +75,18 @@ a{
 `
 const Side = () => {
     return <Wrapper>
-        <div className="side">
-            <div className='logo'>
-                CA
-            </div>
-            <div className='menu'>
-                <a href="#home"><div className="subitem"><span className='icon'>@</span> <span className="text">Home</span></div></a>
-                <a href="#about"><div className="subitem"><span className='icon'>@</span> <span className="text">About</span></div></a>
-                <a href="#skills"><div className="subitem"><span className='icon'>@</span> <span className="text">Skills</span></div></a>
-                <a href="#works"><div className="subitem"><span className='icon'>@</span> <span className="text">Works</span></div></a>
-                <a href="#contact"><div className="subitem"><span className='icon'>@</span> <span className="text">Contact</span></div></a>
-            </div>
-            <div className='menu'>
-                <div className="last"><span className='icon'><i class="fa-regular fa-down-long"></i></span> <span className="text">Scroll&nbsp;Down</span></div>
-            </div>
+        <div className='logo'>
+            CA
+        </div>
+        <div className='menu'>
+            <a href="#home"><div className="subitem"><span className='icon'><i class="fa-solid fa-house"></i></span> <span className="text">Home</span></div></a>
+            <a href="#about"><div className="subitem"><span className='icon'><i class="fa-solid fa-user"></i></span> <span className="text">About</span></div></a>
+            <a href="#skills"><div className="subitem"><span className='icon'><i class="fa-solid fa-laptop-code"></i></span> <span className="text">Skills</span></div></a>
+            <a href="#works"><div className="subitem"><span className='icon'><i class="fa-solid fa-briefcase"></i></span> <span className="text">Works</span></div></a>
+            <a href="#contact"><div className="subitem"><span className='icon'><i class="fa-solid fa-phone"></i></span> <span className="text">Contact</span></div></a>
+        </div>
+        <div className='menu'>
+            <div className="last"><span className='icon'><i class="fa-solid fa-arrow-down-long"></i></span> <span className="text">Scroll&nbsp;Down</span></div>
         </div>
     </Wrapper >
 };
