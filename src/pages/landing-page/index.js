@@ -5,7 +5,6 @@ import About from '../../components/about';
 import Skills from '../../components/skills';
 import Project from '../../components/project';
 import Contact from '../../components/Contact';
-import Foot from "../../components/Footer/index";
 
 const Wrapper = styled.div`
 width: calc(100% - 90px);
@@ -43,7 +42,6 @@ const Main = () => {
                 <Project pre_head={headings[2].pre_head} head={headings[2].head} />
                 <Contact pre_head={headings[3].pre_head} head={headings[3].head} />
             </main>
-            <Foot />
         </div>
     </Wrapper >
 };

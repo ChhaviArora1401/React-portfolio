@@ -74,7 +74,7 @@ const works = [
     },
     {
         src: "assets/halloween.png",
-        heading: "heading",
+        heading: "Halloween Carnival",
         techstats: [
             "PHP",
             "HTML",
