@@ -6,6 +6,7 @@ height: 50px;
 margin-top: 2%;
 background-color: white;
 font-size: 0.99rem;
+padding-left: 6%;
 `
 const Foot = () => {
     return <Wrapper className='flex'>

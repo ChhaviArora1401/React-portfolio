@@ -9,6 +9,7 @@ const Wrapper = styled.section`
     padding: 1rem;
     align-items: center;
 }
+
 `
 
 const Pwrapper = styled.div`
@@ -36,6 +37,39 @@ img {
 a {
     color: #8444df;
 }
+h3 {
+    color: black;
+}
+h3 a {
+    text-decoration: none;
+}
+@media (max-width: 1200px) { 
+    .image img{
+        width: 97%;
+    }
+}
+@media (max-width: 1075px) { 
+    font-size: 0.97rem;
+    .image img{
+        width: 90%;
+    }
+}
+@media (max-width: 930px) { 
+    font-size: 0.95rem;
+    .image img{
+        width: 90%;
+        margin: 0 0 0 5%;
+    }
+    .spans {
+    flex-direction: row;
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    }
+}
+@media (min-width: 768px) { 
+    flex-direction: column;
+}
 `
 
 const works = [
@@ -48,29 +82,8 @@ const works = [
             "CSS",
             "JavaScript"
         ],
+        desc: "Created the front end of FanWiki Web App from scratch using ReactJS. It is a wiki page of games & movies series. The populated data of the web app is scraped from fandom.com using Node JS.",
         livelink: "https://fanwiki.netlify.app/"
-    },
-    {
-        src: "assets/rabear.png",
-        heading: "Fanwiki",
-        techstats: [
-            "React",
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        livelink: "https://rabear.io/"
-    },
-    {
-        src: "assets/cake-bake.png",
-        heading: "Cake Bake",
-        techstats: [
-            "PHP",
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        livelink: "http://cake-bake.rf.gd/"
     },
     {
         src: "assets/halloween.png",
@@ -81,6 +94,7 @@ const works = [
             "CSS",
             "JavaScript"
         ],
+        desc: "Halloween Carnival is a platform made on XAMPP Stack(OS, Apache, MySQL, PHP), which is a demonstration of how SQL injection is used to bypass a login system without login credentials purely for hacking basic fundamentals study.",
         livelink: "http://halloween-carnival.rf.gd/"
     },
     {
@@ -91,18 +105,20 @@ const works = [
             "CSS",
             "JavaScript"
         ],
+        desc: "Imgur Clone is dummy website inspired by the real Imgur. It was built using HTML CSS ",
         livelink: "https://chhaviarora1401.github.io/Imgur-Clone/"
     },
     {
         src: "assets/despoina.png",
-        heading: "Despoina",
+        heading: "Despoina (Password Tool)",
         techstats: [
             "HTML",
             "CSS",
             "JavaScript",
             "Bootstrap 4"
         ],
-        livelink: "despoina-ac075.web.app"
+        desc: "Despiona is a web based password tool to manage all of your password needs. It involves strength checker, and gives you a strong password if you cant seem to find one and lets you know how much time would it take for your password to be brute forced.",
+        livelink: "https://chhaviarora1401.github.io/web/"
     },
     {
         src: "assets/david.png",
@@ -114,7 +130,19 @@ const works = [
             "Bootstrap",
             "Ajax"
         ],
+        desc: "David Chu's China Bistro is the website made for a restaurant that is built using HTML, CSS, JavaScript and Ajax. In this website we pull the data for the restaurant menu dynamically from the server without having to reload the entire page.",
         livelink: "https://chhaviarora1401.github.io/Restaurant-Website/"
+    },
+    {
+        src: "assets/weeezaa.png",
+        heading: "Weeezaa Board",
+        techstats: [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        desc: "Weeezaa Board is a modified version of a Ouija board game, built using HTML, CSS and JavaScript. Users can ask any questions and an answer is auto generated and presented in an exciting way by the Ghost.",
+        livelink: "https://chhaviarora1401.github.io/Weeezaa-Board/"
     }
 ];
 
@@ -123,11 +151,10 @@ padding: 2%;
 `
 
 const Tech = (props) => {
-    return <Iwrapper className='color-text'>
-        <span className='subitems'>{props.span}</span>
+    return <Iwrapper className=''>
+        <span className='subitems color-text'>{props.span}</span>
     </Iwrapper>
 };
-
 
 const Project = (props) => {
     const { pre_head, head } = props;
@@ -139,7 +166,7 @@ const Project = (props) => {
         <div className="sectionContain">
             {
                 works.map((li) => {
-                    return <Work src={li.src} heading={li.heading} span={li.techstats} livelink={li.livelink} repolink={li.repolink} />
+                    return <Work src={li.src} heading={li.heading} span={li.techstats} desc={li.desc} livelink={li.livelink} />
                 })
             }
         </div>
@@ -152,17 +179,20 @@ const Work = (props) => {
             <img src={props.src} />
         </div>
         <div className='desc'>
-            <h3>{props.heading}</h3>
+            <a href={props.livelink}><h3>{props.heading}</h3></a>
             Technologies Used:
-            {
-                props.span.map((li) => {
-                    return <>
-                        <Tech span={li} />
-                    </>
-                })
-            }
+            <span span className='spans'>
+                {
+                    props.span.map((li) => {
+                        return <>
+                            <Tech span={li} />
+                        </>
+                    })
+                }
+            </span>
+            <p>{props.desc}</p>
             <p>
-                <span><a href={props.livelink}>Live </a></span>
+                <span><a href={props.livelink}>Live</a></span>
             </p>
         </div>
     </Pwrapper >

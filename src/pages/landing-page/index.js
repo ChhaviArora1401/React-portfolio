@@ -11,6 +11,12 @@ width: calc(100% - 90px);
 margin-left: 90px;
 overflow: hidden;
 background: #f7f7f7;
+@media (max-width: 990px) {
+    width: 97%;
+    margin-left: 0px;
+    overflow: hidden;
+    margin: 0 2% 0 2%;
+}
 `
 
 const headings = [

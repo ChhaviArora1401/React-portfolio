@@ -72,6 +72,10 @@ a {
     color: white;
 }
 
+@media (max-width: 990px) {
+    visibility:  hidden;
+}
+
 `
 const Side = () => {
     return <Wrapper>

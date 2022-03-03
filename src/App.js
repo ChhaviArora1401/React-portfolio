@@ -7,7 +7,7 @@ import Foot from "./components/Footer/index";
 function App() {
   return (
     <div className="App">
-      <Loader />
+      {/* <Loader /> */}
       <Side />
       <Main />
       <Foot />

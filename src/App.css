@@ -35,6 +35,12 @@ body {
     align-items: center;
 }
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
 .button-intro {
     color: white;
     border: none;
