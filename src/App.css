@@ -101,3 +101,12 @@ body {
     border-radius: 50px;
     padding: 48px;
 }
+
+@media (max-width: 768px) {  
+    .sectionContain {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+}

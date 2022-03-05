@@ -51,7 +51,7 @@ a {
     margin: 0 auto;
     align-items: center;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
 }
 
 .socials {
@@ -84,6 +84,21 @@ a {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+}
+@media (max-width: 768px) { 
+    .image img{
+    width: 40%;
+    }
+    .image {
+        margin: 10% 0 0 0;
+    }
+    .buttons {
+        margin: 5%;
+    }
+    .text {
+        width: 100%;
+    }
 
 `
 const Intro = () => {

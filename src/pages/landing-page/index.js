@@ -17,6 +17,9 @@ background: #f7f7f7;
     overflow: hidden;
     margin: 0 2% 0 2%;
 }
+@media (max-width: 768px) { 
+    // margin: 0 1%;
+}
 `
 
 const headings = [

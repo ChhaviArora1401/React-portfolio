@@ -8,6 +8,9 @@ font-weight: 500;
 article {
     text-align: justify;
 }
+@media (max-width: 768px) {  
+    font-size: 1.15rem;
+}
 `
 const About = (props) => {
     const { pre_head, head } = props;

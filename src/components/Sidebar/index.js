@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Wrapper = styled.section`
+const Wrapper = styled.header`
   background-color: #8444df;
   position: absolute;
   transition: 0.3s;
@@ -72,16 +72,14 @@ a {
     color: white;
 }
 
-@media (max-width: 990px) {
-    visibility:  hidden;
-}
-
 `
 const Side = () => {
     return <Wrapper>
         <div className='logo'>
             CA
         </div>
+        <button>&#9776;</button>
+        <button>&#120;</button>
         <div className='menu'>
             <a href="#home"><div className="subitem"><span className='icon'><i class="fa-solid fa-house"></i></span> <span className="text">Home</span></div></a>
             <a href="#about"><div className="subitem"><span className='icon'><i class="fa-solid fa-user"></i></span> <span className="text">About</span></div></a>

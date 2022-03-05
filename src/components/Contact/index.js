@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import './index.css';
 
 const Wrapper = styled.section`
 flex-direction: column;
@@ -55,16 +57,50 @@ a {
     margin: 1%;  
     width: 94.5%;
 }
+@media (max-width: 768px) { 
+    .half {
+        flex-direction: column;
+    }
+    .button {
+    padding: 15px 35px;
+    width: 35%;
+    margin: 10% auto 0 auto; 
+    }
+    .c1 {
+        width: 100%;
+    }
+    .fields {
+       width: 90%;
+    }
+}
+@media (min-width: 1319px) { 
+    .half {
+        width: 102%;
+    }
+}
 `
 
 const Contact = (props) => {
-    const [email, setEmail] = useState("");
-    const [uname, setUname] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
-    const hello = (e) => {
+    const form = useRef();
+    const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
+    const showAlert = (show = false, msg = '', type = '') => {
+        setAlert({ show, msg, type });
+    }
+    const sendEmail = (e) => {
         e.preventDefault();
-        console.log(email, uname, subject, message);
+        // console.log(form.current);
+        emailjs.sendForm('service_iv3qepd', 'template_p1l1ivm', form.current, 'user_RRk6qcHyhRjAvmOnJnSnEhg')
+            .then((result) => {
+                setTimeout(() => {
+                    showAlert(true, "Email has been sent successfully", "success")
+                }, 1000);
+            }, (error) => {
+                setTimeout(() => {
+                    showAlert(true, "Try again", "error");
+                }, 1000);
+                console.log(error.text);
+
+            });
     };
     const { pre_head, head } = props;
     return <Wrapper className="main-content padding" id="contact">
@@ -82,17 +118,18 @@ const Contact = (props) => {
                 </div>
             </div>
             <h3>Contact Form</h3>
-            <form onSubmit={(e) => hello(e)}>
+            <form ref={form} onSubmit={sendEmail}>
                 <div className='half'>
-                    <input onChange={(e) => setUname(e.target.value)} type="text" placeholder='Name' name="uname" className="fields" defaultValue={uname} />
-                    <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email' name="email" className="fields" defaultValue={email} />
+                    <input type="text" name="name" placeholder="Name" className="fields" />
+                    <input type="text" name="email" placeholder="Email" className="fields" />
                 </div>
-                <input onChange={(e) => setSubject(e.target.value)} type="text" placeholder='Subject' name="subject" className="fields full" defaultValue={subject} />
-                <input onChange={(e) => setMessage(e.target.value)} type="text" placeholder='Message' name="message" className="fields full" defaultValue={message} />
-                <input type="Submit" className='button' />
+                <input type="text" name="subject" placeholder="Subject" className="fields full" />
+                <textarea type="text" name="message" placeholder="Message" className="fields full" />
+                {alert.show && <span className={alert.type}>{alert.msg}</span>}
+                <input type="Submit" className="button" />
             </form>
         </div>
-    </Wrapper >
+    </Wrapper>
 };
 
 export default Contact

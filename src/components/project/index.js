@@ -9,7 +9,6 @@ const Wrapper = styled.section`
     padding: 1rem;
     align-items: center;
 }
-
 `
 
 const Pwrapper = styled.div`
@@ -67,8 +66,16 @@ h3 a {
     flex-wrap: wrap;
     }
 }
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
     flex-direction: column;
+    .image {
+         flex: 0 0 0;
+    }
+    .desc {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
 }
 `
 
@@ -143,7 +150,19 @@ const works = [
         ],
         desc: "Weeezaa Board is a modified version of a Ouija board game, built using HTML, CSS and JavaScript. Users can ask any questions and an answer is auto generated and presented in an exciting way by the Ghost.",
         livelink: "https://chhaviarora1401.github.io/Weeezaa-Board/"
+    },
+    {
+        src: "assets/weeezaa.png",
+        heading: "Portfolio",
+        techstats: [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        desc: "Weeezaa Board is a modified version of a Ouija board game, built using HTML, CSS and JavaScript. Users can ask any questions and an answer is auto generated and presented in an exciting way by the Ghost.",
+        livelink: "https://chhaviarora1401.github.io/MyPortfolio/"
     }
+
 ];
 
 const Iwrapper = styled.span`
