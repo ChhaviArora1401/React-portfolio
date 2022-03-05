@@ -60,10 +60,10 @@ h3 a {
         margin: 0 0 0 5%;
     }
     .spans {
-    flex-direction: row;
-    border: 2px solid red;
-    display: flex;
-    flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;    
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 @media (max-width: 768px) { 
@@ -93,16 +93,27 @@ const works = [
         livelink: "https://fanwiki.netlify.app/"
     },
     {
-        src: "assets/halloween.png",
-        heading: "Halloween Carnival",
+        src: "assets/portfolio.png",
+        heading: "Portfolio",
         techstats: [
-            "PHP",
             "HTML",
             "CSS",
             "JavaScript"
         ],
-        desc: "Halloween Carnival is a platform made on XAMPP Stack(OS, Apache, MySQL, PHP), which is a demonstration of how SQL injection is used to bypass a login system without login credentials purely for hacking basic fundamentals study.",
-        livelink: "http://halloween-carnival.rf.gd/"
+        desc: "This is a website bulit with HTML, CSS, JavaScript to showcase the skills and projects, it uses Vanilla JavaScript for the effects, has a working contact form that connects to Gmail and works on almost every OS.",
+        livelink: "https://chhaviarora1401.github.io/MyPortfolio/"
+    },
+    {
+        src: "assets/despoina.png",
+        heading: "Despoina (Password Tool)",
+        techstats: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap 4"
+        ],
+        desc: "Despiona is a web based password tool to manage all of your password needs. It involves strength checker, and gives you a strong password if you cant seem to find one and lets you know how much time would it take for your password to be brute forced.",
+        livelink: "https://chhaviarora1401.github.io/web/"
     },
     {
         src: "assets/imgur.png",
@@ -116,16 +127,16 @@ const works = [
         livelink: "https://chhaviarora1401.github.io/Imgur-Clone/"
     },
     {
-        src: "assets/despoina.png",
-        heading: "Despoina (Password Tool)",
+        src: "assets/halloween.png",
+        heading: "Halloween Carnival",
         techstats: [
+            "PHP",
             "HTML",
             "CSS",
-            "JavaScript",
-            "Bootstrap 4"
+            "JavaScript"
         ],
-        desc: "Despiona is a web based password tool to manage all of your password needs. It involves strength checker, and gives you a strong password if you cant seem to find one and lets you know how much time would it take for your password to be brute forced.",
-        livelink: "https://chhaviarora1401.github.io/web/"
+        desc: "Halloween Carnival is a platform made on XAMPP Stack(OS, Apache, MySQL, PHP), which is a demonstration of how SQL injection is used to bypass a login system without login credentials purely for hacking basic fundamentals study.",
+        livelink: "http://halloween-carnival.rf.gd/"
     },
     {
         src: "assets/david.png",
@@ -150,17 +161,6 @@ const works = [
         ],
         desc: "Weeezaa Board is a modified version of a Ouija board game, built using HTML, CSS and JavaScript. Users can ask any questions and an answer is auto generated and presented in an exciting way by the Ghost.",
         livelink: "https://chhaviarora1401.github.io/Weeezaa-Board/"
-    },
-    {
-        src: "assets/weeezaa.png",
-        heading: "Portfolio",
-        techstats: [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        desc: "Weeezaa Board is a modified version of a Ouija board game, built using HTML, CSS and JavaScript. Users can ask any questions and an answer is auto generated and presented in an exciting way by the Ghost.",
-        livelink: "https://chhaviarora1401.github.io/MyPortfolio/"
     }
 
 ];
@@ -198,7 +198,7 @@ const Work = (props) => {
             <img src={props.src} />
         </div>
         <div className='desc'>
-            <a href={props.livelink}><h3>{props.heading}</h3></a>
+            <a href={props.livelink} target="_blank" rel="noreferrer"><h3>{props.heading}</h3></a>
             Technologies Used:
             <span span className='spans'>
                 {
@@ -211,7 +211,7 @@ const Work = (props) => {
             </span>
             <p>{props.desc}</p>
             <p>
-                <span><a href={props.livelink}>Live</a></span>
+                <span><a href={props.livelink} target="_blank" rel="noreferrer">Live</a></span>
             </p>
         </div>
     </Pwrapper >

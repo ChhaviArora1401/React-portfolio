@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
+import "./nav.css"
 
-const Wrapper = styled.header`
+const Wrapper = styled.div`
+nav {
   background-color: #8444df;
   position: absolute;
   transition: 0.3s;
@@ -15,7 +17,9 @@ const Wrapper = styled.header`
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
-:hover {
+}
+
+nav:hover {
     width: 220px;
 }
 
@@ -72,25 +76,48 @@ a {
     color: white;
 }
 
+@media (max-width: 990px) {
+  .text {
+  visibility: visible;
+  }
+  nav {
+    width: 220px;
+  }
+  
+}
+
 `
 const Side = () => {
+    const [sidebar, setSidebar] = useState(false);
+
+    const showSidebar = () => setSidebar(!sidebar);
     return <Wrapper>
-        <div className='logo'>
-            CA
+        <div className='navbar'>
+            <span className='menu-bars'>
+                <i class="fa-solid fa-bars" onClick={showSidebar}></i>
+            </span>
         </div>
-        <button>&#9776;</button>
-        <button>&#120;</button>
-        <div className='menu'>
-            <a href="#home"><div className="subitem"><span className='icon'><i class="fa-solid fa-house"></i></span> <span className="text">Home</span></div></a>
-            <a href="#about"><div className="subitem"><span className='icon'><i class="fa-solid fa-user"></i></span> <span className="text">About</span></div></a>
-            <a href="#skills"><div className="subitem"><span className='icon'><i class="fa-solid fa-laptop-code"></i></span> <span className="text">Skills</span></div></a>
-            <a href="#works"><div className="subitem"><span className='icon'><i class="fa-solid fa-briefcase"></i></span> <span className="text">Works</span></div></a>
-            <a href="#contact"><div className="subitem"><span className='icon'><i class="fa-solid fa-phone"></i></span> <span className="text">Contact</span></div></a>
-        </div>
-        <div className='menu'>
-            <div className="last"><span className='icon'><i class="fa-solid fa-arrow-down-long"></i></span> <span className="text">Scroll&nbsp;Down</span></div>
-        </div>
-    </Wrapper >
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+            <span className='navbar-toggle' onClick={showSidebar}>
+                <span className='menu-bars'>
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+            </span>
+            <div className='logo'>
+                CA
+            </div>
+            <div className='menu'>
+                <a href="#home"><div className="subitem"><span className='icon'><i class="fa-solid fa-house"></i></span> <span className="text">Home</span></div></a>
+                <a href="#about"><div className="subitem"><span className='icon'><i class="fa-solid fa-user"></i></span> <span className="text">About</span></div></a>
+                <a href="#skills"><div className="subitem"><span className='icon'><i class="fa-solid fa-laptop-code"></i></span> <span className="text">Skills</span></div></a>
+                <a href="#works"><div className="subitem"><span className='icon'><i class="fa-solid fa-briefcase"></i></span> <span className="text">Works</span></div></a>
+                <a href="#contact"><div className="subitem"><span className='icon'><i class="fa-solid fa-phone"></i></span> <span className="text">Contact</span></div></a>
+            </div>
+            <div className='menu'>
+                <div className="last"><span className='icon'><i class="fa-solid fa-arrow-down-long"></i></span> <span className="text">Scroll&nbsp;Down</span></div>
+            </div>
+        </nav>
+    </Wrapper>
 };
 
 export default Side

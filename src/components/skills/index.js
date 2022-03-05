@@ -5,9 +5,11 @@ const Wrapper = styled.section`
 flex-direction: column;
 .skills {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 3rem;
+    display: grid;
+    -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
     justify-items: center;
 }
 `
@@ -28,6 +30,9 @@ const Iwrapper = styled.div`
     img {
         width: 40%;
     }
+@media (max-width: 768px) { 
+    color: #333;
+}
 `
 const icon = [
     {

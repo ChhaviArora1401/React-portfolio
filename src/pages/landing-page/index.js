@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 width: calc(100% - 90px);
 margin-left: 90px;
 overflow: hidden;
-background: #f7f7f7;
 @media (max-width: 990px) {
     width: 97%;
     margin-left: 0px;
@@ -19,6 +18,17 @@ background: #f7f7f7;
 }
 @media (max-width: 768px) { 
     // margin: 0 1%;
+}
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://cdn.wallpapersafari.com/20/74/x58BEZ.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 `
 
@@ -43,6 +53,7 @@ const headings = [
 
 const Main = () => {
     return <Wrapper>
+        <div className='bg'></div>
         <div className="pageWrapper">
             <Intro />
             <main>

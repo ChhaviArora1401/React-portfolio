@@ -57,6 +57,11 @@ a {
     margin: 1%;  
     width: 94.5%;
 }
+@media (min-width: 1319px) { 
+    .half {
+        width: 102%;
+    }
+}
 @media (max-width: 768px) { 
     .half {
         flex-direction: column;
@@ -72,12 +77,15 @@ a {
     .fields {
        width: 90%;
     }
-}
-@media (min-width: 1319px) { 
-    .half {
-        width: 102%;
+    .icon {
+        background-color: rgba(0,0,0, 0.4);
+    }
+    #mail {
+        color: #666;
     }
 }
+
+
 `
 
 const Contact = (props) => {
@@ -113,7 +121,7 @@ const Contact = (props) => {
             <div className='parti'>
                 <div className='c1'>
                     <span className='icon'><i class="fa-solid fa-envelope"></i></span>
-                    <a href="mailto:chhaviarora1401@gmail.com">chhaviarora1401@gmail.com</a>
+                    <a href="mailto:chhaviarora1401@gmail.com" id="mail">chhaviarora1401@gmail.com</a>
                     Email me
                 </div>
             </div>

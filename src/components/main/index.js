@@ -93,9 +93,6 @@ a {
     .image {
         margin: 10% 0 0 0;
     }
-    .buttons {
-        margin: 5%;
-    }
     .text {
         width: 100%;
     }
@@ -104,17 +101,17 @@ a {
 const Intro = () => {
     return <Wrapper id="home" className="main-content">
         <div className='intro sectionContain'>
-            <div className='image'><img src="https://images.vexels.com/media/users/3/201965/isolated/preview/27f19dc897b1e9a9a96e008bd2e119bb-cute-square-shape.png" /></div>
+            <div className='image'><img src="assets/me.jpg" /></div>
             <div className='text'>
                 <em>HI THERE! I'M</em>
                 <h1 className='head'><span className='color-text'>CHHAVI</span> ARORA</h1>
                 <p>A <span className='color-text'>Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
                 <div className='buttons'>
-                    <a href="https://docs.google.com/document/d/19R6mDWTHA-pDuHBmTGzNiMyo1B1Xp642g2EN_1RuQn0/edit"><button className='button-intro'>Resume</button></a>
+                    <a href="https://docs.google.com/document/d/1NMnwWqUgj_dfy0Lb-KJh5CPqLn5BF10hTD0qnnvl1gE" target="_blank" rel="noreferrer"><button className='button-intro'>Resume</button></a>
                     <span className='socials'>
-                        <a href="https://www.linkedin.com/in/chhaviarora1401/"><button><i class="fa-brands fa-linkedin"></i></button></a>
-                        <a href="https://github.com/ChhaviArora1401"><button><i class="fa-brands fa-github-square"></i></button></a>
-                        <a href="https://twitter.com/chhaviarora1401"><button><i class="fa-brands fa-twitter-square"></i></button></a>
+                        <a href="https://www.linkedin.com/in/chhaviarora1401/" target="_blank" rel="noreferrer"><button><i class="fa-brands fa-linkedin"></i></button></a>
+                        <a href="https://github.com/ChhaviArora1401" target="_blank" rel="noreferrer"><button><i class="fa-brands fa-github-square"></i></button></a>
+                        <a href="https://twitter.com/chhaviarora1401" target="_blank" rel="noreferrer"><button><i class="fa-brands fa-twitter-square"></i></button></a>
                     </span>
                 </div>
             </div>
