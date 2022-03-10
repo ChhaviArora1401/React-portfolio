@@ -105,12 +105,20 @@ body {
 
 @media (max-width: 768px) {  
     .sectionContain {
-    padding: 0;
-    background-color: rgba(0,0,0, 0.4);
-    border-radius: 0px;
-    color: #fff;
-    border-radius: 20px;
-    padding: 20px;
+        background-color: rgba(0,0,0, 0.4);
+        border-radius: 0px;
+        color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+    }   
 }
 
+@media (max-width: 499px) {  
+    .sectionContain {
+        background-color: rgba(0,0,0, 0.4);
+        border-radius: 0px;
+        color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+    }   
 }

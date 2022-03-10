@@ -5,7 +5,6 @@ const Wrapper = styled.section`
 flex-direction: column;
 .skills {
     display: grid;
-    display: grid;
     -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-column-gap: 50px;
@@ -22,8 +21,8 @@ const Iwrapper = styled.div`
     background-color: white;
     padding: 10px 0;
     border-radius: 15px;
-    width: 50%;
-    height: 90%;
+    width: 86px;
+    height: 75px;
     box-shadow: 0px 4px 8px rgb(134 151 168/10%);
     border: 1px solid #eee;
     justify-content: space-between;

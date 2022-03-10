@@ -76,6 +76,9 @@ h3 a {
         margin: auto;
         width: 100%;
     }
+    h3 {
+        color: #fff;
+    }
 }
 `
 
