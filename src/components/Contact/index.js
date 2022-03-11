@@ -8,7 +8,7 @@ const Wrapper = styled.section`
 flex-direction: column;
 .parti {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 .c1 {
@@ -92,7 +92,20 @@ a {
     .button {
         padding: 15px 28px;
     }
+    .c1 {
+        width: 80%;
+    }
 }
+@media (max-width: 399px) { 
+    .button {
+        padding: 15px 20px;
+    }
+    .c1 {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+}
+
 
 
 `

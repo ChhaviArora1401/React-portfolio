@@ -5,8 +5,8 @@ const Wrapper = styled.section`
 flex-direction: column;
 .skills {
     display: grid;
-    -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    -ms-grid-columns: (minmax(80px, 1fr))[auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     grid-column-gap: 50px;
     grid-row-gap: 50px;
     justify-items: center;
@@ -31,6 +31,11 @@ const Iwrapper = styled.div`
     }
 @media (max-width: 768px) { 
     color: #333;
+    .skills {
+        row-gap: 15px;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    }
 }
 `
 const icon = [
