@@ -84,6 +84,15 @@ a {
         color: #666;
     }
 }
+@media (max-width: 499px) { 
+     .fields {
+       width: 84%;
+       margin: 3% 0;
+    }
+    .button {
+        padding: 15px 28px;
+    }
+}
 
 
 `

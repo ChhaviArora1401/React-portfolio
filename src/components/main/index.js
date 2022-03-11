@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 const Wrapper = styled.header`
 height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
 
-.intro {
-    display: flex;
-    flex-direction: column;
-}
+// .intro {
+//     display: flex;
+//     flex-direction: column;
+// }
 
 .image img{
     width: 20%;
@@ -51,7 +51,7 @@ a {
     margin: 0 auto;
     align-items: center;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .socials {
@@ -69,10 +69,7 @@ a {
     border: 1px solid #eee;
     box-shadow: 0px 4px 6px rgb(134 151 168/10%);
     display: inline-block;
-}
-
-.socials a {
-    margin: 0 15px 0 15px;
+    cursor: pointer;
 }
 
 .socials button:hover {
@@ -96,11 +93,28 @@ a {
     .text {
         width: 100%;
     }
+}
 
+@media (max-width: 499px) { 
+    .text {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .socials {
+        margin: 5% 0 0 0;
+    }
+    .head {
+
+    }
+
+}
 `
 const Intro = () => {
     return <Wrapper id="home" className="main-content">
-        <div className='intro sectionContain'>
+        <div className='sectionContain'>
             <div className='image'><img src="assets/me.jpg" /></div>
             <div className='text'>
                 <em>HI THERE! I'M</em>

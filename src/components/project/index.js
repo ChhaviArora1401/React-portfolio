@@ -23,7 +23,8 @@ padding: 15px 0 10px 0;
 .image {
     flex: 0 0 350px;
     border-radius: 10px;
-    height: auto;
+    display: block;
+    margin: auto 0;
 }
 img {
     width: 100%;
@@ -214,7 +215,7 @@ const Work = (props) => {
             </span>
             <p>{props.desc}</p>
             <p>
-                <span><a href={props.livelink} target="_blank" rel="noreferrer">Live</a></span>
+                <span><a href={props.livelink} target="_blank" rel="noreferrer">Project Live Link</a></span>
             </p>
         </div>
     </Pwrapper >
